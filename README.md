@@ -5,8 +5,11 @@ It is not meant to be used by public because it is not a generic project:
 
 - It doesn't support Linux
 - It only supports the latest Electron version.
-  - It might work with old versions but it's not tested.
+  - It might work with old versions of Electron but it's not tested.
+  - It doesn't work in Node.js
 - It only supports x64
+
+You may want to use the original project directly instead of using this project.
 
 
 ## What is the purpose?
