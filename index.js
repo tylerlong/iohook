@@ -1,27 +1,19 @@
 const EventEmitter = require('events');
-const path = require('path');
 
-const runtime = process.versions['electron'] ? 'electron' : 'node';
-const essential =
-  runtime +
-  '-v' +
-  process.versions.modules +
-  '-' +
-  process.platform +
-  '-' +
-  process.arch;
-const modulePath = path.join(
-  __dirname,
-  'builds',
-  essential,
-  'build',
-  'Release',
-  'iohook.node'
-);
-if (process.env.DEBUG) {
-  console.info('Loading native binary:', modulePath);
+let NodeHookAddon;
+switch(process.platform) {
+  case 'darwin': {
+    NodeHookAddon = require('./built/macOS/iohook.node');
+    break;
+  }
+  case 'win32': {
+    NodeHookAddon = require('./built/windows/iohook.node');
+    break;
+  }
+  default: {
+    throw new Error(`Does not support ${process.platform}`);
+  }
 }
-let NodeHookAddon = require(modulePath);
 
 const events = {
   3: 'keypress',
