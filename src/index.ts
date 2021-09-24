@@ -4,11 +4,11 @@ const EventEmitter = require('events');
 let NodeHookAddon: any;
 switch (process.platform) {
   case 'darwin': {
-    NodeHookAddon = require('../built/macOS/iohook.node');
+    NodeHookAddon = require('../prebuilt/macOS/iohook.node');
     break;
   }
   case 'win32': {
-    NodeHookAddon = require('../built/windows/iohook.node');
+    NodeHookAddon = require('../prebuilt/windows/iohook.node');
     break;
   }
   default: {

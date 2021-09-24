@@ -42,7 +42,7 @@
   dependencies:
     "@cspotcode/source-map-consumer" "0.8.0"
 
-"@electron/get@^1.0.1":
+"@electron/get@^1.13.0":
   version "1.13.0"
   resolved "https://registry.yarnpkg.com/@electron/get/-/get-1.13.0.tgz#95c6bcaff4f9a505ea46792424f451efea89228c"
   integrity sha512-+SjZhRuRo+STTO1Fdhzqnv9D2ZhjxXP6egsJ9kiO8dtP68cDx7dFCwWi64dlMQV7sWcfW1OYCW4wviEBzmRsfQ==
@@ -666,12 +666,12 @@ duplexer3@^0.1.4:
   resolved "https://registry.yarnpkg.com/duplexer3/-/duplexer3-0.1.4.tgz#ee01dd1cac0ed3cbc7fdbea37dc0a8f1ce002ce2"
   integrity sha1-7gHdHKwO08vH/b6jfcCo8c4ALOI=
 
-electron@12:
-  version "12.1.2"
-  resolved "https://registry.yarnpkg.com/electron/-/electron-12.1.2.tgz#aca178efc40fe422f7bfeddeeec63e40c11a16c5"
-  integrity sha512-yWlnKfJYDsvJjV2GyiBqpbqYI4DkTwk1OP/YRVodp9tfDLqAp9VdE8VZXbl1y29pZtIY+/YtUedBQc1RY3RMqQ==
+electron@^15.0.0:
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/electron/-/electron-15.0.0.tgz#b1b6244b1cffddf348c27c54b1310b3a3680246e"
+  integrity sha512-LlBjN5nCJoC7EDrgfDQwEGSGSAo/o08nSP5uJxN2m+ZtNA69SxpnWv4yPgo1K08X/iQPoGhoZu6C8LYYlk1Dtg==
   dependencies:
-    "@electron/get" "^1.0.1"
+    "@electron/get" "^1.13.0"
     "@types/node" "^14.6.2"
     extract-zip "^1.0.3"
 
