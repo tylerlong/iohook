@@ -19,6 +19,34 @@ The original iohook project doesn't support webpack very well. Especially, you n
 So I want to simplify the project by limiting what it supports to make it work better with webpack.
 
 
-## Todo
+## How to build the latest prebuilt
 
-- Create a script to auto download prebuilt from https://github.com/wilix-team/iohook/releases.
+Git clone official iohook.
+
+```
+npm install
+```
+
+### macOS
+
+```
+node build.js --runtime electron --version 15.0.0 --abi 98 --upload=false
+```
+
+Built files are in `./build/Release` folder, they are
+
+- iohook.node
+- uiohook.dylib
+
+### windows
+
+Install VS Studio 2019 with C++ desktop development kit.
+
+```
+node build.js --runtime electron --version 15.0.0 --abi 98 --upload=false --msvs_version=2019
+```
+
+Built files are in `./build/Release` folder, they are
+
+- iohook.node
+- uiohook.dll
